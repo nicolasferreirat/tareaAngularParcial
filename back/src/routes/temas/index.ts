@@ -26,7 +26,7 @@ const temasRoutes: FastifyPluginAsync = async (
         },
       },
     },
-    onRequest: [fastify.verifyJWT],
+    //onRequest: [fastify.verifyJWT],
     handler: async function (request, reply) {
       return temaService.findAll();
     },

@@ -1,0 +1,15 @@
+<div class="topic-list-container">
+  <h2>Lista de Temas</h2>
+  <div *ngIf="topicList.length > 0; else noTopic">
+    <p *ngFor=" let topic of topicList">
+      {{ topic.titulo }} -> {{ topic.descripcion}}
+    </p>
+    <br />
+  </div>
+  <ng-template #noTopic>
+    <p>No hay temas disponibles</p>
+  </ng-template>
+
+  <button [routerLink]="['/home']">Volver al Menú</button>
+  <p></p>
+</div>
